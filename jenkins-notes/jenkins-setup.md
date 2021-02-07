@@ -26,12 +26,12 @@
 * Options configured by startup flags (JENKINS_OPTS):
 
 
-   |  Flag |  Effect |
-   |---|---|
-   |  --prefix $PREFIX (default: /) | Runs Jenkins to include the $PREFIX at the end of the URL  |
-   | --httpPort $PORT (default: 8080)  |  Jenkins listens on $PORT port  |
-   | --httpListenAddress $HTTP_HOST (default: 0.0.0.0)  | Binds Jenkins to the IP address represented by $HTTP_HOST|
-   | --logfile $LOGFILE  |  write to $LOGFILE instead of stdout |
+   |  Flag | Description | Default
+   |---|---| --- |
+   |  --prefix $PREFIX | Runs Jenkins to include the $PREFIX at the end of the URL  | (default: /) |
+   | --httpPort $PORT  |  Jenkins listens on $PORT port  | (default: 8080) |
+   | --httpListenAddress $HTTP_HOST | Binds Jenkins to the IP address represented by $HTTP_HOST |  (default: 0.0.0.0) |
+   | --logfile $LOGFILE  |  write to $LOGFILE instead of stdout |  (default: stdout) 
 
 
 * Advanced runtime configuration example:
