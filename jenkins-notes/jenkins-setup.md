@@ -1,4 +1,6 @@
-# Install and Run Jenkins as WAR file
+# Install and Run Jenkins as standalone application
+
+ Jenkins uses an embedded application server (Jetty) and can be invoked from the command line
 
 1. [Download Jenkins](https://www.jenkins.io/download/).
 
@@ -9,4 +11,34 @@
 4. Browse to http://localhost:8080.
 
 ----
+
+# Advanced Configurations 
+
+* Anatomy of the jenkins run command (Runtime support Java 8/11) 
+ 
+   [Refer Java requirements for jenkins](https://www.jenkins.io/doc/administration/requirements/java/)
+
+  ```
+  $ java ${JAVA_OPTS} -jar jenkins.war ${JENKINS_OPTS}
+  ```
+
+
+* Options configured by startup flags (JENKINS_OPTS):
+
+
+   |  Flag |  Effect |
+   |---|---|
+   |  --prefix $PREFIX (default: /) | Runs Jenkins to include the $PREFIX at the end of the URL  |
+   | --httpPort $PORT (default: 8080)  |  Jenkins listens on $PORT port  |
+   | --httpListenAddress $HTTP_HOST (default: 0.0.0.0)  | Binds Jenkins to the IP address represented by $HTTP_HOST|
+   | --logfile $LOGFILE  |  write to $LOGFILE instead of stdout |
+
+
+* Configuration Example:
+
+  ```
+   java -jar jenkins.war --httpPort=8081 --prefix=/ci --httpListenAddress=127.0.0.1
+  ```
+
+* [Jenkins command line arguemnets reference](https://www.jenkins.io/doc/book/installing/initial-settings/#configuring-http).
 
