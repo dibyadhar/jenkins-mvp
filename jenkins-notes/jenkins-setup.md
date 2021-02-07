@@ -14,7 +14,7 @@
 
 # Advanced Configurations 
 
-* Anatomy of the jenkins run command (Runtime support Java 8/11) 
+* Anatomy of the jenkins run command (Runtime requirement => Java 8/11) 
  
    [Refer Java requirements for jenkins](https://www.jenkins.io/doc/administration/requirements/java/)
 
@@ -34,11 +34,11 @@
    | --logfile $LOGFILE  |  write to $LOGFILE instead of stdout |
 
 
-* Configuration Example:
+* Advanced runtime configuration example:
 
   ```
    java -jar jenkins.war --httpPort=8081 --prefix=/ci --httpListenAddress=127.0.0.1
   ```
 
-* [Jenkins command line arguemnets reference](https://www.jenkins.io/doc/book/installing/initial-settings/#configuring-http).
+* [Jenkins command line arguemnets reference](https://www.jenkins.io/doc/book/installing/initial-settings/#networking-parameters).
 
